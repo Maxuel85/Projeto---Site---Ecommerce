@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="produtos.css">
+    <link rel="stylesheet" href="footer.css">
+    <title>Página de Produtos</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./img/Logan.jpg" alt="Logan">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="pag inicial.html">Home</a></li>
+                <li>
+                    <a href="#">Sobre</a>
+                    <ul>
+                        <li><a href="quemsomos.html">Quem Somos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar...">
+            <button><img src="https://img.icons8.com/ios-filled/24/f1efe8/search.png" alt="Search"></button>
+        </div>
+        <div class="icons">
+            <img src="https://img.icons8.com/ios-filled/50/f1efe8/login-rounded-right.png" alt="Login" id="login-icon">
+            <img src="https://img.icons8.com/ios-filled/50/f1efe8/shopping-bag.png" alt="Carrinho" id="sacola">
+            <img src="https://img.icons8.com/ios-filled/50/f1efe8/like.png" alt="Favoritos">
+        </div>
+    </header>
+    <div id="login-form" class="login-form">
+        <h3>Login</h3>
+        <form>
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="login-email" required>
+            
+            <label for="login-password">Senha:</label>
+            <input type="password" id="login-password" name="login-password" required>
+            
+            <button type="submit">Login</button>
+            <a href="#" class="create-account">Criar Cadastro</a>
+        </form>
+    </div>
+    <main>
+        <aside>
+            <h1>Produtos para os cabelos</h1>
+            <ul>
+                <li><a href="#">Kits de tratamento</a></li>
+                <li><a href="#">Shampoo</a></li>
+                <li><a href="#">Condicionador</a></li>
+                <li><a href="#">Tratamento para cabelos</a></li>
+                <li><a href="#">Leave-in e Creme para pentear</a></li>
+                <li><a href="#">Modelador de cabelos</a></li>
+                <li><a href="#">Finalizador para cabelos</a></li>
+                <li><a href="#">Escova progressiva</a></li>
+                <li><a href="#">Acessórios para cabelos</a></li>
+                <li><a href="#">Coloração</a></li>
+            </ul>
+            <h1>Tipos de cabelos</h1>
+            <ul>
+                <li><a href="#">Cabelos danificados</a></li>
+                <li><a href="#">Cabelos cacheados ou ondulados</a></li>
+                <li><a href="#">Cabelos lisos</a></li>
+                <li><a href="#">Cabelos crespos</a></li>
+                <li><a href="#">Cabelos quimicamente tratados</a></li>
+            </ul>
+            <h1>Categorias</h1>
+            <ul>
+                <li><a href="#">Produtos femininos</a></li>
+                <li><a href="#">Produtos masculinos</a></li>
+                <li><a href="#">Produtos infantis</a></li>
+            </ul>
+        </aside>
+        
+        <section id="produtos">
+            <div class="product-card">
+                <img src="./img/1.png" alt="Imagem do Produto 1">
+                <b>LOLA FROM RIO</b>
+                <p>Kit Lola Cosmetics Morte Súbita Dupla Ação (2 Produtos)
+                <p>gfc_11</p>
+                <br>
+                <p class="estoque_produto">Estoque: <span id="estoque-lola">50</span></p>
+                <br>R$ 54,90</p>
+                <div class="button-container">
+                <button onclick="adicionarAoCarrinho('LOLA FROM RIO', 54.90)" id="adicionar">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./img/2.png" alt="Imagem do Produto 2">
+                <b>WELLA PROFESSIONALS</b>
+                <p>Kit Oil Reflections & Refill Lively Mini (2 Produtos)
+                <p>gfc_24</p>
+                <br>
+                <p class="estoque_produto">Estoque: <span id="estoque-wella">120</span></p>
+                <br>R$ 135,90</p>
+                <div class="button-container">
+                <button onclick="adicionarAoCarrinho('WELLA PROFESSIONALS', 135.90)" id="adicionar">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./img/3.png" alt="Imagem do Produto 3">
+                <b>PANTENE</b>
+                <p>Kit Pro-V Restauração Duo (2 Produtos)
+                <p>gfc_56</p>
+                <br>
+                <p class="estoque_produto">Estoque: <span id="estoque-pantene">100</span></p>
+                <br>R$ 30,71</p>
+                <div class="button-container"> 
+                <button onclick="adicionarAoCarrinho('PANTENE', 30.71)" id="adicionar">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./img/4.png" alt="Imagem do Produto 4">
+                <b>CLEAR</b>
+                <p>Men Cabelos & Barba Shampoo Anticaspa 200ml
+                <p>gfc_71</p>
+                <br>
+                <p class="estoque_produto">Estoque: <span id="estoque-clear">90</span></p>
+                <br>R$ 21,99</p>
+                <div class="button-container">
+                <button onclick="adicionarAoCarrinho('CLEAR', 21.99)" id="adicionar">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./img/5.png" alt="Imagem do Produto 5">
+                <b>OUJI</b>
+                <p>Kit Homme Creme de Barbear + Creme Pós-Barba (3 Produtos)
+                <p>gfc_05</p>
+                <br>
+                <p class="estoque_produto">Estoque: <span id="estoque-ouji">50</span></p>
+                <br>R$ 158,00</p>
+                <div class="button-container">
+                <button onclick="adicionarAoCarrinho('OUJI', 158.00)" id="adicionar">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./img/6.png" alt="Imagem do Produto 6">
+                <b>NEW OLD MAN</b>
+                <p>Kit com Necessaire</p>
+                <p>gfc_69</p>
+                <br>
+                <p class="estoque_produto">Estoque: <span id="estoque-new-old-man">80</span></p>
+                <br>R$ 242,00</p>
+                <div class="button-container">
+                <button onclick="adicionarAoCarrinho('NEW OLD MAN', 242.00)" id="adicionar">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./img/7.png" alt="Imagem do Produto 7">
+                <b>EUDORA</b>
+                <p>Kit Shampoo + Condicionador (2 Produtos)</p>
+                <p>gfc_16</p>
+                <br>
+                <p class="estoque_produto">Estoque: <span id="estoque-eudora">60</span></p>
+                <br>R$ 50,48</p>
+                <div class="button-container">
+                <button onclick="adicionarAoCarrinho('EUDORA', 50.48)" id="adicionar">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./img/8.png" alt="Imagem do Produto 8">
+                <b>SALON LINE</b>
+                <p>S.O.S Cachos Kids - Creme de Pentear 300ml</p>
+                <p>gfc_86</p>
+                <br>
+                <p class="estoque_produto">Estoque: <span id="estoque-salon-line">100</span></p>
+                <br>R$ 16,48
+                <div class="button-container">
+                <button onclick="adicionarAoCarrinho('SALON LINE', 16.48)" id="adicionar">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/9.png" alt="Imagem do Produto 9">
+                <b>BIO EXTRATUS</b>
+                <p>Kit Cabelos Liso Duo (2 Produtos)</p>
+                <p>gfc_91</p>
+                <br>
+                <p class="estoque_produto">Estoque: <span id="estoque-bio-extratus">50</span>50</p>
+                <br>R$ 9,99
+                <div class="button-container">
+                <button onclick="adicionarAoCarrinho('BIO EXTRATUS', 9.99)" id="adicionar">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="payment-methods">
+                <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa">
+                <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="MasterCard">
+                <img src="https://img.icons8.com/color/48/000000/amex.png" alt="American Express">
+                <img src="https://img.icons8.com/color/48/000000/paypal.png" alt="PayPal">
+            </div>
+            <div class="copyright">
+                &copy; Group Four Cosmetics 2024
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="https://img.icons8.com/ios-filled/50/f1efe8/twitter.png" alt="Twitter" class="social-icon"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/50/f1efe8/youtube-play.png" alt="YouTube" class="social-icon"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/50/f1efe8/facebook-new.png" alt="Facebook" class="social-icon"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/50/f1efe8/instagram-new.png" alt="Instagram" class="social-icon"></a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="chat-icon" class="chat-icon">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/chat.png" alt="Chat Icon" height="25px" width="25px">
+    </div>
+
+    <div id="chat-window" class="chat-window">
+        <div class="chat-header">
+            <h3>Fale com um atendente</h3>
+            <span id="close-chat" class="close-chat">&times;</span>
+        </div>
+        <div class="chat-body">
+            <div class="chat-messages">
+             
+            </div>
+            <div class="submenu">
+                <p>Em que podemos te ajudar?</p>
+                <ul>
+                    <li><button>1. Problemas com sua Compra?</button></li>
+                    <li><button>2. Problemas com a Entrega?</button></li>
+                    <li><button>3. Problemas com Pagamento?</button></li>
+                    <li><button>4. Problemas com o Cadastro?</button></li>
+                    <li><button>5. Outros Assuntos</button></li>
+                    <li><button>6. Sair do Chat</button></li>
+                </ul>
+            </div>
+            <form id="chat-form">
+                <input type="text" id="chat-input" placeholder="Digite sua mensagem..." required>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="footer.js"></script>
+    <script src="produtos.js"></script>
+</body>
+
+</html>
