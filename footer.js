@@ -40,3 +40,33 @@ carrinho.addEventListener("click", function() {
 
 let home = documento.getElementById("Home");
 
+document.addEventListener('DOMContentLoaded', function() {
+    let sobre = document.querySelector('nav ul li:nth-child(2)'); // Seleciona o item "Sobre"
+    let submenu = sobre.querySelector('ul'); // Seleciona o submenu "Quem Somos"
+    let timeout;
+
+    // Mostrar o submenu ao passar o mouse
+    sobre.addEventListener('mouseenter', function() {
+        clearTimeout(timeout);  // Limpa o timeout se houver um
+        submenu.style.display = 'block';  // Exibe o submenu
+    });
+
+    // Ocultar o submenu com atraso ao sair do mouse
+    sobre.addEventListener('mouseleave', function() {
+        timeout = setTimeout(function() {
+            submenu.style.display = 'none';  // Esconde o submenu após 500ms
+        }, 500);  // Tempo de atraso de 500ms
+    });
+
+    // Manter o submenu visível se o mouse estiver sobre ele
+    submenu.addEventListener('mouseenter', function() {
+        clearTimeout(timeout);  // Cancela o timeout quando o mouse está sobre o submenu
+    });
+
+    // Ocultar o submenu quando o mouse sair dele com o mesmo atraso
+    submenu.addEventListener('mouseleave', function() {
+        timeout = setTimeout(function() {
+            submenu.style.display = 'none';  // Esconde o submenu após 500ms
+        }, 500);
+    });
+});
